@@ -18,7 +18,7 @@ namespace SupermarketWEB.Pages.Categories
           _context = context;
         }
 		[BindProperty]
-		public Category Category { get; set; } = default;
+		public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -37,15 +37,15 @@ namespace SupermarketWEB.Pages.Categories
             else 
             {
                 Category = category;
-            
+                _context.Categories.Remove(category);
+                await _context.SaveChangesAsync();
+
             }
-            return Page();  
-
-            
-
+            return RedirectToPage("./Index");
+        }
 
 
-    }
+        /*
 		public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null || _context.Categories == null)
@@ -63,7 +63,7 @@ namespace SupermarketWEB.Pages.Categories
 
             return RedirectToPage("./Index");
         }
-
+        */
 
 
 	}

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
-using System.Reflection.Metadata.Ecma335;
+
 
 namespace SupermarketWEB.Pages.Categories
 {
@@ -14,9 +14,9 @@ namespace SupermarketWEB.Pages.Categories
         private readonly SupermarketContext _context;
 
 
-        public CreateModel(SupermarketContext cotext)
+        public CreateModel(SupermarketContext context)
         {
-            _context = cotext;
+            _context = context;
         }
 
         public IActionResult OnGet()

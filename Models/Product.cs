@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SupermarketWEB.Models
 {
-	public class Products
+	public class Product
 	{
 		//[Key]
 		public int Id { get; set; }

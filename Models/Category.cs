@@ -8,7 +8,7 @@
 		public ICollection<Product> Products { get; set; } = default!;
 	}
 
-	public class Product
+	/*public class Product
 	{
-	}
+	}*/
 }

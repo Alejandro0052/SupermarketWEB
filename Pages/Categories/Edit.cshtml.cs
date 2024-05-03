@@ -52,7 +52,8 @@ namespace SupermarketWEB.Pages.Categories
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException) 
+           // catch (DbUpdateConcurrencyException)   HERE A MODIFICATION
+           catch (Exception ex)             
             {
                 if (!CategoryExists(Category.Id))
                 {
