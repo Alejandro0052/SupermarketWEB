@@ -5,6 +5,8 @@ namespace SupermarketWEB.Data
 {
 	public class SupermarketContext : DbContext
 	{
+		internal object Providers;
+
 		public SupermarketContext(DbContextOptions options) : base(options)
 		{
 		}
