@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
-
+using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.Providers
+
 {
     public class CreateModel : PageModel
     {
@@ -32,7 +33,7 @@ namespace SupermarketWEB.Pages.Providers
 			{
 				return Page();
 			}
-		//	_context.Providers.Add(Provider);
+			//_context.Providers.Add(Provider);
 			await _context.SaveChangesAsync();
 
 			return RedirectToPage("./Index");

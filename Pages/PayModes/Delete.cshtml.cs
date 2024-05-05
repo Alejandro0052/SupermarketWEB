@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
 
@@ -12,7 +13,7 @@ namespace SupermarketWEB.Pages.PayModes
 		   }
 		*/
 		private readonly SupermarketContext _context;
-	/* ERROR
+
 	  public DeleteModel(SupermarketContext context)
 		{
 			_context = context;
@@ -39,8 +40,8 @@ namespace SupermarketWEB.Pages.PayModes
 				await _context.SaveChangesAsync();
 			}
 			return RedirectToPage("./Index");
-		}
-	*/
+	}
+	
 
 
 	}

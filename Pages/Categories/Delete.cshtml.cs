@@ -45,7 +45,7 @@ namespace SupermarketWEB.Pages.Categories
         }
 
 
-        /*
+        
 		public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null || _context.Categories == null)
@@ -63,7 +63,7 @@ namespace SupermarketWEB.Pages.Categories
 
             return RedirectToPage("./Index");
         }
-        */
+        
 
 
 	}

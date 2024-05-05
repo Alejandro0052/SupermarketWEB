@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
 
+
 namespace SupermarketWEB.Pages.Products
 {
     public class CreateModel : PageModel

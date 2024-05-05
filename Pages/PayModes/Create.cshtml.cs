@@ -31,7 +31,7 @@ namespace SupermarketWEB.Pages.PayModes
 			{
 				return Page();
 			}
-			// ERROR AQUI _context.PayModes.Add(PayMode);
+		    _context.PayModes.Add(PayMode);
 			await _context.SaveChangesAsync();
 
 			return RedirectToPage("./Index");
