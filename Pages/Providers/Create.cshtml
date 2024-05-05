@@ -1,4 +1,39 @@
 ﻿@page
 @model SupermarketWEB.Pages.Providers.CreateModel
 @{
+	ViewData["Title"] = "Create";
+}
+<h1>Create</h1>
+<h4>Provider</h4>
+<hr />
+<div class="row">
+	<div class="col md -4">
+		<form method="post">
+			<div aps=validation =summary ="ModelOnly" = class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Provider.IdDocument" class="control-label"></label>
+				<input asp-for="Provider.IdDocument" class="form-control" />
+				<span asp-asp-validation-for="Provider.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Provider.Name" class="control-label"></label>
+				<input asp-for="Provider.Name" class="form-control" />
+				<span asp-asp-validation-for="Provider.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Provider.Description" class="control-label"></label>
+				<input asp-for="Provider.Description" class="form-control" />
+				<span asp-asp-validation-for="Provider.Description" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn-btn-success" />
+				<a asp-page="Index" class="btn btn-primary">Back to list</a>
+			</div>
+		</form>
+	</div>
+</div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
