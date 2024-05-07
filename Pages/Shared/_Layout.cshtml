@@ -23,12 +23,24 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Categories/Index"Categories></a>   
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Categories/Index">Categories</a>   
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Providers/Index">Providers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Paymodes/Index">Paymodes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Products/Index">Products</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+                        </li>                                                           
                     </ul>
+                    <div class="mr-2">
+                        <partial name="_loginStatusPartial" />
+                    </div>
                 </div>
             </div>
         </nav>

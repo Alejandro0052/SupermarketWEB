@@ -24,7 +24,7 @@ namespace SupermarketWEB.Pages.Providers
 		{
 			if (_context.Providers != null)
 			{
-		//FAIL HERE CHECK  Providers = await _context.Providers.ToListAsync();
+	           Providers = await _context.Providers.ToListAsync();
 			}
 		}
 

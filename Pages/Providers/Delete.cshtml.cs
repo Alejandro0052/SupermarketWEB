@@ -21,7 +21,7 @@ namespace SupermarketWEB.Pages.Providers
 
 			public Provider Provider { get; set; } = default!;
 
-    /* COMENTADO MIENTRAS SE ENCUENTRA EL ERROR
+    
      
 		public async Task<IActionResult> OnGetAsync(int? id)
 		{
@@ -44,7 +44,9 @@ namespace SupermarketWEB.Pages.Providers
 				}
 				return RedirectToPage("./Index");
 			}
-		*/
-	}
+
+      
+
+    }
 
 }

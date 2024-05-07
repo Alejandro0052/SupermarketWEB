@@ -33,15 +33,11 @@ namespace SupermarketWEB.Pages.Providers
 			{
 				return Page();
 			}
-			//_context.Providers.Add(Provider);
+			_context.Providers.Add(Provider);
 			await _context.SaveChangesAsync();
 
 			return RedirectToPage("./Index");
 		}
 	}
 
-	public class Provider
-	{
-		internal int Id;
-	}
 }

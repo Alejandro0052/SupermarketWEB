@@ -20,8 +20,8 @@ namespace SupermarketWEB.Pages.Providers
 		[BindProperty]
 		public Provider Provider { get; set; } = default;
 
-//ERRORRRR ACOMODAR ERROR
-	/*	public async Task<IActionResult> OnGetAsync(int? id)
+
+		public async Task<IActionResult> OnGetAsync(int? id)
 		{
 			if (id == null || _context.Providers == null)
 			{
@@ -68,6 +68,6 @@ namespace SupermarketWEB.Pages.Providers
 		{
 			return (_context.Providers?.Any(e => e.Id == id)).GetValueOrDefault();
 		} 
-		*/
+		
 	}
 }
