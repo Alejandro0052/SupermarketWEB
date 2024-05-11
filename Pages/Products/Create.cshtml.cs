@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
@@ -6,6 +7,7 @@ using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.Products
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
 		/*public void OnGet()

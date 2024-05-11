@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.Providers
 {
+    [Authorize]
     public class EditModel : PageModel
     {
 		/*public void OnGet()
