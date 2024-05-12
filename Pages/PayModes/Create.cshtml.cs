@@ -8,10 +8,7 @@ namespace SupermarketWEB.Pages.PayModes
 {
 	[Authorize]
 	public class CreateModel : PageModel
-    {
-		/* public void OnGet()
-		 {
-		 }*/
+	{
 		private readonly SupermarketContext _context;
 		public CreateModel(SupermarketContext context)
 		{
@@ -33,11 +30,10 @@ namespace SupermarketWEB.Pages.PayModes
 			{
 				return Page();
 			}
-		    _context.PayModes.Add(PayMode);
+			_context.PayModes.Add(PayMode);
 			await _context.SaveChangesAsync();
 
 			return RedirectToPage("./Index");
 		}
-
 	}
 }

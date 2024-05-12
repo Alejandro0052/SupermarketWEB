@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -7,16 +6,10 @@ using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.PayModes
 {
-	[Authorize]
 	public class DeleteModel : PageModel
-    {
-		/*   public void OnGet()
-		   {
-		   }
-		*/
+	{
 		private readonly SupermarketContext _context;
-
-	  public DeleteModel(SupermarketContext context)
+		public DeleteModel(SupermarketContext context)
 		{
 			_context = context;
 		}
@@ -30,7 +23,7 @@ namespace SupermarketWEB.Pages.PayModes
 			{
 				return NotFound();
 			}
-		var paymode = await _context.PayModes.FirstOrDefaultAsync(m => m.Id == id);
+			var paymode = await _context.PayModes.FirstOrDefaultAsync(m => m.Id == id);
 			if (paymode == null)
 			{
 				return NotFound();
@@ -42,9 +35,6 @@ namespace SupermarketWEB.Pages.PayModes
 				await _context.SaveChangesAsync();
 			}
 			return RedirectToPage("./Index");
-	}
-	
-
-
+		}
 	}
 }

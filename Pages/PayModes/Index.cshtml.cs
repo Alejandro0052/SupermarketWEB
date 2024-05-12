@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
@@ -9,10 +8,7 @@ namespace SupermarketWEB.Pages.PayModes
 {
 	[Authorize]
 	public class IndexModel : PageModel
-    {
-        /*public void OnGet()
-        {
-        }*/
+	{
 		private readonly SupermarketContext _context;
 
 		public IndexModel(SupermarketContext context)
@@ -25,7 +21,7 @@ namespace SupermarketWEB.Pages.PayModes
 		{
 			if (_context.PayModes != null)
 			{
-     	PayModes = await _context.PayModes.ToListAsync();
+				PayModes = await _context.PayModes.ToListAsync();
 			}
 		}
 	}
