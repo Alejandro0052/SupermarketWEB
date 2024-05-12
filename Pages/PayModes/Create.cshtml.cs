@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
@@ -5,7 +6,8 @@ using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.PayModes
 {
-    public class CreateModel : PageModel
+	[Authorize]
+	public class CreateModel : PageModel
     {
 		/* public void OnGet()
 		 {

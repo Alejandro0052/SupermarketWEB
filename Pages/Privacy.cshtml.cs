@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SupermarketWEB.Pages
 {
-	public class PrivacyModel : PageModel
+    [Authorize]
+    public class PrivacyModel : PageModel
 	{
 		private readonly ILogger<PrivacyModel> _logger;
 

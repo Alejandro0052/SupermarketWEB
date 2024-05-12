@@ -3,11 +3,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
 
-
 namespace SupermarketWEB.Pages.Categories
 {
-    public class CreateModel : PageModel
-    {
+	public class CreateModel : PageModel
+	{
 		private readonly SupermarketContext _context;
 		public CreateModel(SupermarketContext context)
 		{
@@ -36,7 +35,7 @@ namespace SupermarketWEB.Pages.Categories
 		}
 
 
-
 	}
+
 }
 

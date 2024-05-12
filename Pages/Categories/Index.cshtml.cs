@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,20 +7,15 @@ using SupermarketWEB.Models;
 
 namespace SupermarketWEB.Pages.Categories
 {
+	[Authorize]
 	public class IndexModel : PageModel
 	{
-		/*public void OnGet()
-		{
-
-		}*/
-
 		private readonly SupermarketContext _context;
 
 		public IndexModel(SupermarketContext context)
 		{
 			_context = context;
 		}
-
 		public IList<Category> Categories { get; set; } = default;
 
 		public async Task OnGetAsync()
@@ -29,8 +25,6 @@ namespace SupermarketWEB.Pages.Categories
 				Categories = await _context.Categories.ToListAsync();
 			}
 		}
-
-
 
 	}
 }
